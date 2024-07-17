@@ -1,22 +1,16 @@
 from modelos.restaurante import Restaurante
-
-restaurante_Silva = Restaurante('Silva Food', 'Comidas Tipícas')
-restaurante_Silva.alternar_estado()
-restaurante_Silva.receber_avaliacao('Pablo', 4)
-restaurante_Silva.receber_avaliacao('Natiele', 5)
-restaurante_Silva.receber_avaliacao('Jose', 2)
-restaurante_Silva.receber_avaliacao('Livia', 3)
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 restaurante_VilaPizza = Restaurante('Vila Pizza', 'Pizza')
-restaurante_VilaPizza.alternar_estado()
-restaurante_VilaPizza.receber_avaliacao('Alfredo', 3)
-restaurante_VilaPizza.receber_avaliacao('Esther', 5)
-restaurante_VilaPizza.receber_avaliacao('Carina', 3)
-
-restaurante_ChurrascariaBiz = Restaurante('Churrascaria Biz', 'Churrascaria')
+bebida_suco = Bebida('Suco de Abacaxi', 5.0, 'Grande')
+Pizza = Prato('Pizza', 10.0, 'A melhor pizza da cidade')
+restaurante_VilaPizza.adicionar_no_cardapio(bebida_suco)
+restaurante_VilaPizza.adiconar_no_cardapio(Pizza)
 
 def main():
-    Restaurante.listar_restaurantes()
+    print(bebida_suco)
+    print(Pizza)
 
 if __name__ == '__main__':
     main()
